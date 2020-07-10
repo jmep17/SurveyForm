@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Favourite Dog Survey 2020</h1>
+        <p id="description">Finding out the people's fav pooch!</p>
+      </header>
+
+      <div class="content">
+        <form action="post" id="survey-form">
+          <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              pattern="[a-zA-Z]*"
+              placeholder="Enter your name"
+              maxlength="10"
+              minlength="1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="number" id="number-label">Age</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              class="form-control"
+              placeholder="Enter your age"
+              min="13"
+              max="105"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label id="ownership-label">Do you own a dog?</label>
+            <br />
+            <input type="checkbox" name="ownership" id="ownership-y" value="yes" />
+            <label for="ownership-y" id="ownership-y-label">Yes</label>
+            <input type="checkbox" name="ownership" id="ownership-n" value="no" />
+            <label for="ownership-n" id="ownership-n-label">No</label>
+          </div>
+          <div class="form-group">
+            <label id="breed-label">What kind of dog do you own?</label>
+            <select id="dropdown" name="breed" id="breed" class="form-control">
+              <option value="bichon-frise">Bichon frise</option>
+              <option value="labrador">Labrador</option>
+              <option value="bulldog">Bulldog</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="other" id="other-label"></label>
+            <input
+              type="text"
+              name="other"
+              id="other"
+              placeholder="If 'Other', enter your dog's breed"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label id="favourite-label"
+              >What's your favourite kind of dog?</label
+            >
+            <select
+              id="dropdown"
+              name="favourite"
+              id="favourite"
+              class="form-control"
+            >
+              <option value="bichon-frise">Bichon frise</option>
+              <option value="labrador">Labrador</option>
+              <option value="bulldog">Bulldog</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="fave-other-label"></label>
+            <input
+              type="text"
+              name="fave-other-label"
+              id="fave-other-label"
+              placeholder="If 'Other', enter your favourite breed"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+              <label>Are dogs the best animal ever to exist?</label>
+              <br>
+              <input type="radio" name="best" value="yes" id="yes">
+              <label for="yes">Yes</label>
+              <input type="radio" name="best" value="no" id="no">
+              <label for="no">No, but I'm wrong</label>
+          </div>
+          <div class="form-group">
+            <label for="comments">Additional comments?</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              class="form-control"
+            >
+            </textarea>
+          </div>
+          <div class="form-group">
+            <button
+              type="submit"
+              form="survey-form"
+              id="submit"
+              class="submit-button"
+            >
+              Submit
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
